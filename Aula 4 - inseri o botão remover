@@ -6,25 +6,20 @@
   <title>Document</title>
 </head>
 <body>
-    <input id="texto" type="text">
-    <button onclick="adicionar();">Adicionar</button>
+  <h1>Bem-vindo ao site!</h1>
+  <button>Ocultar</button>
   <script>
-    function adicionar(){
-      const divNova = document.createElement("div");
-      const h2Nova = document.createElement("h2");
-      const texto = document.getElementById("texto").value;
-      h2Nova.innerHTML = texto;
-      divNova.appendChild(h2Nova);
-      divNova.style.border = "2px solid red";
-      document.body.appendChild(divNova);
-
-      const btRemover = document.createElement("button");
-      btRemover.innerHTML = "Remover";
-      divNova.appendChild(btRemover);
-      btRemover.addEventListener('click', function(){
-          divNova.remove();
-      })
-    }
+    const msg = document.getElementsByTagName("h1")[0];
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", function(){
+      if(msg.style.display === "none"){
+        msg.style.display = "block";
+        botao.textContent = "Ocultar";
+      }else{
+        msg.style.display = "none";
+        botao.textContent = "Mostrar";
+      }
+    })
   </script>
-
 </body>
+</html>
