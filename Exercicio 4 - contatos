@@ -20,6 +20,7 @@
     const botao = document.getElementById("cadastrar");
   
     let contato = {
+      let contato = {
         nome: nome.value,
         telefone: telefone.value
       };
@@ -30,15 +31,17 @@
       let t = telefone.value;
       if(n === "" || t === ""){
         //alert("Preencha os campos!");
+        alert("Preencha os campos!");
         return;
       }
       let contato = {
+      contato = {
         nome: n,
         telefone: t
       };
-      
+
       contatos.push(contato);
-      
+
       mostrarContatos();
       nome.value = "";
       telefone.value = "";
@@ -52,8 +55,7 @@
       lista.appendChild(item);
       });
     }
-    
-    
+
+
   </script>
 </body>
-</html>
